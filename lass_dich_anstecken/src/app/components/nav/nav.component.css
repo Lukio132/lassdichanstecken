@@ -1,0 +1,17 @@
+
+.active {
+/* Tło gradientowe od niebieskiego (#3b82f6) do ciemniejszego niebieskiego (#2563eb) */
+background: linear-gradient(to right, #3b82f6, #2563eb);
+
+/* Biały kolor tekstu */
+color: white;
+
+/* Cień z rozmyciem o mocy 20% */
+box-shadow: 0 4px 14px rgba(59, 130, 246, 0.2);
+
+/* Po najechaniu dodaj większy cień */
+transition: box-shadow 0.3s ease-in-out;
+
+border-radius: 12px;
+
+}
