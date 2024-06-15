@@ -1,1 +1,22 @@
-<p>flashcards works!</p>
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold mb-4">{{ currentFlashcard?.question }}</h2>
+        <p *ngIf="showAnswer" class="text-xl">{{ currentFlashcard?.answer }}</p>
+        <button (click)="toggleAnswer()" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
+          {{ showAnswer ? 'Ukryj odpowiedź' : 'Pokaż odpowiedź' }}
+        </button>
+        <button *ngIf="currentFlashcard" (click)="markAsLearned()" class="mt-4 px-4 py-2 bg-gray-400 text-white rounded ml-2"
+          [disabled]="currentFlashcard.learned">
+          Oznacz jako nauczone
+        </button>
+        <button (click)="nextFlashcard()" class="mt-4 px-4 py-2 bg-green-500 text-white rounded ml-2">
+          Następna fiszka
+        </button>
+      </div>
+      <div class="mt-6 text-center text-gray-600">
+        <p class="text-lg font-semibold">Nauczone fiszki: {{ learnedCount }}</p>
+      </div>
+    </div>
+  </div>
+  
