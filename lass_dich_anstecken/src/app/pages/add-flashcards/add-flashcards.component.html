@@ -1,0 +1,16 @@
+<div class="p-4">
+    <h2 class="text-lg font-bold mb-4">Dodaj Fiszkę</h2>
+    <form (ngSubmit)="onSubmit()" #flashcardForm="ngForm">
+      <div class="mb-4">
+        <label for="title" class="block text-sm font-medium text-gray-700">Tytuł</label>
+        <input type="text" id="title" name="title" class="mt-1 p-2 border border-gray-300 rounded w-full"
+               [(ngModel)]="flashcard.title" required>
+      </div>
+      <div class="mb-4">
+        <label for="content" class="block text-sm font-medium text-gray-700">Treść</label>
+        <textarea id="content" name="content" class="mt-1 p-2 border border-gray-300 rounded w-full"
+                  [(ngModel)]="flashcard.content" required></textarea>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white p-2 rounded" [disabled]="!flashcardForm.form.valid">Dodaj</button>
+    </form>
+  </div>
