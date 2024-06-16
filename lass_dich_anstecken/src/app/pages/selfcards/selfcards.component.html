@@ -1,0 +1,10 @@
+<div class="p-4">
+    <h2 class="text-lg font-bold mb-4">Twoje Fiszki</h2>
+    <ul>
+      <li *ngFor="let flashcard of flashcards" class="mb-4 p-4 border border-gray-300 rounded">
+        <h3 class="font-bold">{{ flashcard.title }}</h3>
+        <p>{{ flashcard.content }}</p>
+      </li>
+    </ul>
+  </div>
+  
